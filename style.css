@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #ffcc2b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.computer {
+    position: relative;
+    padding: 10px;
+}
+
+.head {
+    width: 300px;
+    height: 250px;
+    margin: 150px auto;
+    display: flex;
+    border: 15px solid #000;
+    border-radius: 12px;
+    background-color: #000;
+    outline: 5px solid #fff;
+    position: relative;
+}
+
+.head .left {
+    width: 70%;
+    background-color: #eee;
+    border-radius: 12px;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+    border-right: 4px solid #000;
+    z-index: 2;
+}
+
+.head .right {
+    width: 30%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #ff5d5d;
+    border-top: 5px solid #000;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+    transform: translateX(-2px);
+    z-index: 1;
+}
+
+.head .right .right_one {
+    height: 5%;
+    background-color: #fff;
+    border-top-right-radius: 5px;
+}
+
+.head .right .right_two {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.head .right .right_two span {
+    width: 80%;
+    height: 4px;
+    background-color: #000;
+}
+
+.head .right .right_three {
+    height: 25%;
+    background-color: gray;
+    border-bottom-right-radius: 5px;
+}
+
+.head .bafl {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    right: -33%;
+    transform: translate(-50%, -50%);
+    border: 15px solid #000;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #f50;
+    overflow: hidden;
+}
+
+.head .bafl .bafl_one {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+}
+
+.head .bafl .bafl_two {
+    position: absolute;
+    top: 6%;
+    left: -53px;
+    height: 73%;
+    width: 100px;
+    background-color: #f50;
+    border-radius: 50%;
+}
+
+.head .bafl .bafl_three {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background-color: gray;
+    z-index: -1;
+}
+
+.head .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+}
+
+.head .left .ecran {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #000;
+    box-shadow: 15px 15px #000 inset;
+    border-radius: 12px;
+    background-color: rgba(128, 128, 128, 0.667);
+    position: relative;
+}
+
+.head .left .ecran::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.579);
+    transform:matrix3d(10deg, 10deg);
+}
+
+.head .left ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.head .left ul li {
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.head .left .grand_cercle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+}
+
+.middle {
+    position: absolute;
+    bottom: 240px;
+    top: 59%;
+    left: 50%;
+    transform: translateX(-112px);
+    width: 220px;
+    height: 20px;
+    background-color: green;
+    border: 5px solid #000;
+    border-left: 15px solid #000;
+    border-right: 15px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+.middle::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(190, 161, 161, 0.585);
+    border-left: 3px solid #000;
+}
+
+.foot {
+    width: 380px;
+    height: 100px;
+    position: relative;
+    bottom: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    outline: 5px solid #fff;
+    border: 17px solid #000;
+    display: flex;
+    z-index: -1;
+    
+}
+
+.foot::before {
+    content: "";
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    width: 450px;
+    height: 20px;
+    background-color: #000;
+}
+
+.foot .foot_left {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-right: 5px solid #000;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #fff;
+}
+
+.foot .foot_left .btns {
+    display: flex;
+    position: relative;
+    background-color: green;
+    border-radius: 8px;
+}
+
+.foot .foot_left .btns ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    border: 2px solid #000;
+    width: 100px;
+    border-left: 10px solid #000;
+    border-radius: 8px;
+}
+
+.foot_left .btns .btn {
+    background-color: blueviolet;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    border: 1px solid #000;
+    box-shadow: 5px 0px #000;
+}
+
+.foot .foot_left .btns ul li {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+}
+
+.foot .foot_left .reset {
+    width: 80px;
+    height: 20px;
+    border-radius: 12px;
+    background-color: #000;
+    margin: 12px 0;
+}
+
+.foot .foot_right {
+    width: 40%;
+    background-color: #f50;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 12px;
+    margin: 0 0 0 -6px;
+    z-index: -1;
+}
+
+.foot .foot_right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+}
+
+.foot .foot_right::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: gray;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+
+
